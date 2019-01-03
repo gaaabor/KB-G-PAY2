@@ -1,0 +1,3 @@
+<header class="header">
+    {{ svg(sprite = "logos", "logo-kb-gpay", "header__logo") }}
+</header>

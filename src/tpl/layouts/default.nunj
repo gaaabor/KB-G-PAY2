@@ -1,0 +1,54 @@
+{% from "helpers/svg.nunj" import svg %}
+    
+{% set firstVisit = false %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ _cssPath }}/main{% if not _dev %}.min{% endif %}.css">
+
+    {% if firstVisit %}
+        <script>
+            {#-- Google webfont --#}
+            WebFontConfig = {
+                google: {
+                    families: ['Open+Sans:400,600,600i,700', 'Montserrat:600,800,900']
+                }
+            };
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async defer></script>
+    {% else %}
+        {#-- Google webfont --#}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,800,900|Open+Sans:400,600,600i,700" rel="stylesheet">
+    {% endif %}
+</head>
+<body>
+
+    <header class="header">
+        {{ svg(sprite = "logos", "logo-kb-gpay", "header__logo") }}
+    </header>
+
+    {# Main content of the page #}
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    {% include "../components/footer.nunj" %}
+
+    {# Scripts #}
+    <script>
+        var mockUrl = 'http://localhost:' + '{{ _mockPort }}';
+
+        var config = {};
+    </script>
+    {% if _dev %}
+        <script src="{{ _jsPath }}/app.js" async></script>
+    {% else %}
+        <script src="{{ _jsPath }}/app.min.js" async></script>
+    {% endif %}
+</body>
+</html>

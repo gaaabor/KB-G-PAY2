@@ -1,0 +1,55 @@
+{% from "../helpers/svg.nunj" import svg %}
+
+
+{% set items = [
+    {
+        counter: '1.',
+        title: 'Digitalizujte kartu',
+        description: 'Stáhněte nebo aktualizujte aplikaci Mobilní banka.',
+        id: '1'
+    },
+    {
+        counter: '2.',
+        title: 'Registrujte se',
+        description: 'Vyplňte soutěžní formulář níže.',
+        id: '2'
+    },
+    {
+        counter: '3.',
+        title: 'Plaťte mobilem s Google Pay',
+        description: 'Výše platby nerozhoduje.',
+        id: '3'
+    }] 
+%}
+
+{% for item in items %}
+  <div class="features__item">
+  <div class="features__icon">
+      <div class="features__icon-background">
+        <div class="features__icon-counter">{{ item.counter }}</div>
+        {% if (item.id == 1) %}
+          {{ svg("icon-feature-card", "features__icon-svg") }}
+        {% elif (item.id == 2) %}
+          {{ svg("icon-feature-register", "features__icon-svg") }}
+        {% else %}
+          {{ svg("icon-feature-mobile-payment", "features__icon-svg") }}
+        {% endif %}     
+      </div>
+  </div>
+  <div class="features__text">
+    <h2 class="heading__secondary">{{ item.title }}</h2>
+    <p>{{ item.description }}</p>
+  </div>
+
+  {% if (item.id == 1) or (item.id == 2) %}
+  <div class="features__dots">
+    <span class="dot">.</span> <span class="dot">.</span>
+    <span class="dot">.</span> <span class="dot">.</span>
+    <span class="features__dots--tablet">
+      <span class="dot">.</span> <span class="dot">.</span>
+      <span class="dot">.</span>
+    </span>
+  </div>
+  {% endif %}
+</div>
+{% endfor %}

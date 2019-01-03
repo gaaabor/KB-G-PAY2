@@ -1,0 +1,13 @@
+{% extends "layouts/default.nunj" %}
+
+{% set title = "KB G Pay" %}
+
+{% block content %}
+
+  {% include "sections/features.nunj" %}
+
+  {% include "sections/carousel.nunj" %}
+
+  {% include "sections/form.nunj" %}
+
+{% endblock %}
