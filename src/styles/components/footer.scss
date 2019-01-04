@@ -2,32 +2,41 @@
   color: #fff;
   background-color: $color-black;
   &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     padding-top: 6rem;
     font-family: $font-secondary;
+    font-size: 1.4rem;
+    font-weight: 600;
     line-height: 18px;
-    h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
+    text-align: center;
 
-      @include respond(tab) {
-        margin: 0 3rem;
-      }
+    @include respond(tab) {
+      margin: 1rem 3rem;
     }
-    hr {
-      display: none;
-      flex-basis: 20%;
-      overflow: hidden;
-      border-color: rgba(114, 114, 114, .5);
-      border-style: inset;
-      border-width: 1px;
+  }
+  &__title::before,
+  &__title::after {
+    position: absolute;
+    bottom: 8px;
+    display: none;
+    height: 1.5px;
+    background-color: rgba(114, 114, 114, .5);
+    content: '';
 
-      @include respond(tab) {
-        display: block;
-      }
+    @include respond(tab) {
+      display: inline-block;
+      width: 17%;
     }
+
+    @include respond(desktop) {
+      width: 20%;
+    }
+  }
+  &__title::before {
+    left: 15%;
+  }
+  &__title::after {
+    right: 15%;
   }
   &__container {
     display: flex;
@@ -39,7 +48,7 @@
     margin-top: 3rem;
     margin-bottom: 4rem;
   }
-  &__copyright {
+  &__bottom {
     text-align: center;
     p {
       display: block;

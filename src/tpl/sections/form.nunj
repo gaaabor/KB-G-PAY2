@@ -1,45 +1,41 @@
 <section class="form">
 
-  <div class="form__title">
-    <h1 class="heading__primary">Registrační formulář</h1>
-    <p class="paragraph">Vyplň formulář a začni soutěžit.</p>
-  </div>
+  <h1 class="heading-primary form__heading">Registrační formulář</h1>
+  <p class="para">Vyplň formulář a začni soutěžit.</p>
 
   <form id="form">
-    <div class="form__container">
-      <input type="text" placeholder="First Name" name="name" required />
-      <input
-        type="text"
-        placeholder="Last Name"
-        name="surname"
-        required
-      />
-      <input type="email" placeholder="Email" name="email" required />
-      <input
-        type="text"
-        placeholder="Phone number"
-        name="phone"
-        required
-      />
-      <input
-        type="date"
-        placeholder="Date of Birth"
-        name="date"
-        required
-      />
-      <div class="newsletter">
-        <label class="checkbox">
-          <input
-            type="checkbox"
-            name="newsletterAgreement"
-            value="true"
-          />
-          <span class="checkmark"></span>
-        </label>
-        <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan.</p>
-      </div>
-      <button type="submit" class="registerbtn">Odeslat</button>
+    <input type="text" placeholder="First Name" name="name" required />
+    <input
+      type="text"
+      placeholder="Last Name"
+      name="surname"
+      required
+    />
+    <input type="email" placeholder="Email" name="email" required />
+    <input
+      type="text"
+      placeholder="Phone number"
+      name="phone"
+      required
+    />
+    <input
+      type="date"
+      placeholder="Date of Birth"
+      name="date"
+      required
+    />
+    <div class="checkbox-group">
+      <label class="checkbox">
+        <input
+          type="checkbox"
+          name="newsletterAgreement"
+          value="true"
+        />
+        <span class="checkmark"></span>
+      </label>
+      <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan.</p>
     </div>
+    <button type="submit" class="registerbtn">Odeslat</button>
   </form>
 
 </section>

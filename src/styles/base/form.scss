@@ -1,12 +1,8 @@
 .form {
   padding: 1.5rem;
   text-align: center;
-  &__title {
-    margin-top: 1.5rem;
-    p {
-      margin-top: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
+  &__heading {
+    margin: 1.5rem 0;
   }
   input[type='text'],
   input[type='email'],
@@ -83,7 +79,7 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .newsletter {
+  .checkbox-group {
     display: flex;
     justify-content: center;
     margin: 2.5rem 0;

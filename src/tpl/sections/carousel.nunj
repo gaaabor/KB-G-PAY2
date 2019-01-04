@@ -1,61 +1,37 @@
-<section class="carousel__section">
-  <div class="carousel__content">
+{% from "../helpers/svg.nunj" import svg %}
 
-    <h2 class="heading__secondary heading__secondary--white">
+{% set slides = [
+    {
+        counter: '01',
+        text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
+               osobních kreditních nebo služebních a korporátních kreditních
+               karet) vydaných Komerční bankou a podmínek společnosti Google,
+               který je provozovatelem služby Google Pay.',
+        id: '1'
+    }] 
+%}
+
+<section class="slider__section">
+  <div class="slider__content">
+
+    <h2 class="heading-secondary heading-secondary--white">
       Jak začít používat Google Pay?
     </h2>
 
-    <div class="carousel carousel-slider center">
-
-      <div class="carousel-fixed-item">
-        <a id="prev" class="carousel__arrow">
-          <img src="./img/icon-arrow-right.svg" alt="Left" />
-        </a>
-        <a id="next" class="carousel__arrow">
-          <img src="./img/icon-arrow-right.svg" alt="Right" />
-        </a>
-      </div>
-
-      <div class="carousel-item" href="#one!">
-        <div class="carousel__counter">01</div>
-        <p>
-          Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
-          osobních kreditních nebo služebních a korporátních kreditních
-          karet) vydaných Komerční bankou a podmínek společnosti Google,
-          který je provozovatelem služby Google Pay.
+    <div class="slider">      
+      {% for slide in slides %}
+      <div class="slider__item" href="#one!">
+        <div class="slider__counter">{{ slide.counter }}</div>
+        <p class="slider__text">
+          {{ slide.text }}
         </p>
-      </div>
-      <div class="carousel-item" href="#two!">
-        <div class="carousel__counter">02</div>
-        <p>
-          Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
-          osobních kreditních nebo služebních a korporátních kreditních
-          karet) vydaných Komerční bankou a podmínek společnosti Google,
-          který je provozovatelem služby Google Pay.
-        </p>
-      </div>
-      <div class="carousel-item" href="#three!">
-        <div class="carousel__counter">03</div>
-        <p>
-          Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
-          osobních kreditních nebo služebních a korporátních kreditních
-          karet) vydaných Komerční bankou a podmínek společnosti Google,
-          který je provozovatelem služby Google Pay.
-        </p>
-      </div>
-      <div class="carousel-item" href="#four!">
-        <div class="carousel__counter">04</div>
-        <p>
-          Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
-          osobních kreditních nebo služebních a korporátních kreditních
-          karet) vydaných Komerční bankou a podmínek společnosti Google,
-          který je provozovatelem služby Google Pay.
-        </p>
-        </div>
+      </div> 
+      {% endfor %}
     </div>
+
   </div>
 
-  <div class="carousel__video">
+  <div class="slider__video">
     <iframe
       class="iframe"
       src="https://www.youtube.com/embed/xEU9dnsRyVo"
@@ -66,8 +42,6 @@
     </iframe>
   </div>
 
-  <div class="carousel__link">
-    <a href="#">Kompletní návod najdete zde</a>
-  </div>
+  <a class="slider__link" href="#">Kompletní návod najdete zde</a>
 
 </section>
