@@ -10,9 +10,11 @@
     z-index: 2;
     display: block;
     width: 75%;
+
     @include respond(tab) {
       width: 40%;
     }
+
     @include respond(desktop) {
       width: 30%;
     }

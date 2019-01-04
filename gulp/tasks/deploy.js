@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const gutil = require('gulp-util');
 const runSequence = require('run-sequence');
 const argv = require('yargs').argv;
-const tar = require('gulp-tar');
-const gzip = require('gulp-gzip');
+// const tar = require('gulp-tar');
+// const gzip = require('gulp-gzip');
 const scp = require('gulp-scp2');
 
 const config = require('../config');

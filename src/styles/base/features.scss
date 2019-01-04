@@ -2,196 +2,199 @@
 // MOBILE
 ////////////////////////////////////////////////////
 .features {
-   width: 90%;
-   margin: 0 auto;
-   background-color: rgba(255, 255, 255, 0.7);
-   transform: translateY(-3rem);
-   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.1);
-   &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-   &__title {
-      padding: 3rem 3rem 0 3rem;
-      p {
-         margin-top: 1rem;
-      }
-   }
-   &__item {
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, .7);
+  transform: translateY(-3rem);
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, .1);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    padding: 3rem 3rem 0;
+    p {
+      margin-top: 1rem;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 23rem;
+    min-height: 115px;
+    padding-left: 1rem;
+    margin-top: 3rem;
+  }
+  &__icon {
+    width: 10rem;
+    height: 10rem;
+    &-background {
       position: relative;
-      display: flex;
-      justify-content: space-between;
-      width: 23rem;
-      min-height: 115px;
-      padding-left: 1rem;
-      margin-top: 3rem;
-   }
-   &__icon {
-      width: 10rem;
-      height: 10rem;
-      &-background {
-         position: relative;
-         width: 9rem;
-         height: 9rem;
-         background-color: #fff;
-         border-radius: 50%;
-         box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
-         @include flexCenter;
-      }
-      &-svg {
-         width: 5.5rem;
-      }
-      &-counter {
-         position: absolute;
-         top: -8px;
-         left: -13px;
-         width: 3rem;
-         height: 3rem;
-         font-family: $font-secondary;
-         font-size: 1.05rem;
-         font-weight: 800;
-         color: #ffffff;
-         background-color: $color-red;
-         border-radius: 50%;
-         @include flexCenter;
-      }
-   }
-   &__text {
-      margin: 0 1.5rem;
-      h2 {
-         min-width: 12rem;
-      }
-      p {
-         margin-top: 5px;
-         font-family: $font-secondary;
-         font-size: 1.2rem;
-         line-height: 17px;
-         color: rgba(25, 25, 25, 0.5);
-      }
-   }
-   &__dots {
+      width: 9rem;
+      height: 9rem;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1);
+
+      @include flexCenter;
+    }
+    &-svg {
+      width: 5.5rem;
+    }
+    &-counter {
       position: absolute;
-      bottom: -10px;
-      left: 53px;
+      top: -8px;
+      left: -13px;
+      width: 3rem;
+      height: 3rem;
+      font-family: $font-secondary;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fff;
+      background-color: $color-red;
+      border-radius: 50%;
+
+      @include flexCenter;
+    }
+  }
+  &__text {
+    margin: 0 1.5rem;
+    h2 {
+      min-width: 12rem;
+    }
+    p {
+      margin-top: 5px;
+      font-family: $font-secondary;
+      font-size: 1.2rem;
+      line-height: 17px;
+      color: rgba(25, 25, 25, .5);
+    }
+  }
+  &__dots {
+    position: absolute;
+    bottom: -10px;
+    left: 53px;
+    font-size: 1.5rem;
+    &--tablet {
+      display: none;
+    }
+    span.dot {
+      display: block;
+      line-height: 7px;
+    }
+
+    @media only screen and (min-width: 1050px) {
+      right: -90%;
+    }
+  }
+  &__bottom {
+    padding: 0 3rem 3rem;
+    margin: 4rem auto 0;
+    text-align: center;
+    p {
+      font-family: $font-primary;
       font-size: 1.5rem;
-      &--tablet {
-         display: none;
-      }
-      span.dot {
-         display: block;
-         line-height: 7px;
-      }
-      @media only screen and (min-width: 1050px) {
-         right: -90%;
-      }
-   }
-   &__bottom {
-      padding: 0 3rem 3rem 3rem;
-      margin: 4rem auto 0 auto;
-      text-align: center;
-      p {
-         font-family: $font-primary;
-         font-size: 1.5rem;
-         line-height: 20px;
-         color: $color-black;
-      }
-      p:first-of-type {
-         margin-top: 3rem;
-         margin-bottom: 1rem;
-      }
-      span {
-         color: $color-red;
-      }
-   }
+      line-height: 20px;
+      color: $color-black;
+    }
+    p:first-of-type {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    span {
+      color: $color-red;
+    }
+  }
 }
 
 ////////////////////////////////////////////////////
 // TABLET
 ////////////////////////////////////////////////////
 @include respond(tab) {
-   .features {
-      &__container {
-         flex-direction: row;
-         align-items: flex-start;
-         justify-content: space-evenly;
+  .features {
+    &__container {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-evenly;
+    }
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 22rem;
+      padding-left: 0;
+      text-align: center;
+    }
+    &__icon {
+      display: flex;
+      justify-content: center;
+      width: 12rem;
+      height: 12rem;
+      &-background {
+        width: 11rem;
+        height: 11rem;
       }
-      &__item {
-         flex-direction: column;
-         align-items: center;
-         justify-content: flex-start;
-         min-height: 22rem;
-         padding-left: 0;
-         text-align: center;
+      &-svg {
+        width: 6rem;
       }
-      &__icon {
-         display: flex;
-         justify-content: center;
-         width: 12rem;
-         height: 12rem;
-         &-background {
-            width: 11rem;
-            height: 11rem;
-         }
-         &-svg {
-            width: 6rem;
-         }
-         &-counter {
-            width: 3.6rem;
-            height: 3.6rem;
-            font-size: 1.3rem;
-         }
+      &-counter {
+        width: 3.6rem;
+        height: 3.6rem;
+        font-size: 1.3rem;
       }
-      &__text {
-         max-width: 12rem;
-         margin-top: 1rem;
-         p {
-            margin-top: 1rem;
-         }
+    }
+    &__text {
+      max-width: 12rem;
+      margin-top: 1rem;
+      p {
+        margin-top: 1rem;
       }
-      &__dots {
-         top: 15%;
-         right: -75%;
-         font-size: 1.9rem;
-         white-space: nowrap;
-         span.dot {
-            display: inline;
-         }
-         &--tablet {
-            display: inline;
-         }
+    }
+    &__dots {
+      top: 15%;
+      right: -75%;
+      font-size: 1.9rem;
+      white-space: nowrap;
+      span.dot {
+        display: inline;
       }
-      &__bottom {
-         max-width: 53rem;
+      &--tablet {
+        display: inline;
       }
-   }
+    }
+    &__bottom {
+      max-width: 53rem;
+    }
+  }
 }
 
 ////////////////////////////////////////////////////
 // DESKTOP
 ////////////////////////////////////////////////////
 @include respond(desktop) {
-   .features {
-      max-width: 920px;
-      &__title {
-         padding: 5rem 0 2rem 0;
+  .features {
+    max-width: 920px;
+    &__title {
+      padding: 5rem 0 2rem;
+    }
+    &__icon {
+      &-background {
+        width: 12rem;
+        height: 12rem;
       }
-      &__icon {
-         &-background {
-            width: 12rem;
-            height: 12rem;
-         }
-         &-counter {
-            top: 0px;
-            left: -4px;
-         }
+      &-counter {
+        top: 0;
+        left: -4px;
       }
-      &__text {
-         margin-top: 2rem;
-      }
-      &__dots {
-         top: 18%;
-         right: -83%;
-      }
-   }
+    }
+    &__text {
+      margin-top: 2rem;
+    }
+    &__dots {
+      top: 18%;
+      right: -83%;
+    }
+  }
 }

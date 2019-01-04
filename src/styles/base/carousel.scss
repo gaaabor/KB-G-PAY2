@@ -1,182 +1,198 @@
 .carousel {
-   &__section {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      padding: 1.5rem;
-      text-align: center;
-      background-color: $color-black;
-      h2 {
-         max-width: 21rem;
-         margin: 3rem auto 0.5rem auto;
-         @include respond(tab) {
-            margin: 0;
-         }
-      }
+  &__section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: $color-black;
+    h2 {
+      max-width: 21rem;
+      margin: 3rem auto .5rem;
+
       @include respond(tab) {
-         flex-direction: row;
-         justify-content: space-between;
+        margin: 0;
       }
-      @include respond(desktop) {
-         justify-content: center;
-      }
-   }
-   &__content {
-      @include respond(tab) {
-         max-width: 320px;
-         padding: 3rem;
-         text-align: left;
-      }
-   }
-   &__video {
-      margin-bottom: 6rem;
-      @include respond(tab) {
-         flex-basis: 60%;
-         align-self: center;
-      }
-      @include respond(desktop) {
-         flex-basis: 40%;
-         margin-bottom: 0;
-      }
-      .iframe {
-         width: 100%;
-         height: 170px;
-         @include respond(tab) {
-            height: 250px;
-         }
-         @include respond(desktop) {
-            height: 350px;
-         }
-      }
-   }
-   &__counter {
-      margin: 0.5rem 0;
-      font-family: $font-secondary;
-      font-size: 4rem;
-      font-weight: 800;
-      line-height: 49px;
-      color: $color-red;
-   }
-   &__arrow {
-      position: absolute;
-      bottom: 2px;
-      padding: 1rem;
-      font-size: 2rem;
-      color: $color-red;
-      cursor: pointer;
-      img {
-         height: 20px;
-      }
-      &:first-of-type {
-         left: 15px;
-         img {
-            transform: rotate(180deg);
-         }
-         @include respond(tab) {
-            left: -15px;
-         }
-      }
-      &:last-of-type {
-         right: 15px;
-         @include respond(tab) {
-            right: -15px;
-         }
-      }
-   }
-   &.carousel-slider {
-      position: relative;
-      top: 0;
-      left: 0;
+    }
+
+    @include respond(tab) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include respond(desktop) {
+      justify-content: center;
+    }
+  }
+  &__content {
+    @include respond(tab) {
+      max-width: 320px;
+      padding: 3rem;
+      text-align: left;
+    }
+  }
+  &__video {
+    margin-bottom: 6rem;
+
+    @include respond(tab) {
+      flex-basis: 60%;
+      align-self: center;
+    }
+
+    @include respond(desktop) {
+      flex-basis: 40%;
+      margin-bottom: 0;
+    }
+    .iframe {
       width: 100%;
-      min-height: 270px;
-      overflow: hidden;
-      perspective: 500px;
-      transform-style: preserve-3d;
-      transform-origin: 0% 50%;
-      .carousel-fixed-item {
-         position: absolute;
-         right: 0;
-         bottom: 4rem;
-         left: 0;
-         z-index: 1;
-         @include respond(tab) {
-            bottom: 2rem;
-         }
+      height: 170px;
+
+      @include respond(tab) {
+        height: 250px;
       }
-      .carousel-item {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         overflow: auto;
-         visibility: hidden;
-         h2 {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 32px;
-         }
-         p {
-            width: 85%;
-            margin: 0 auto;
-            font-size: 12px;
-            color: #fff;
-            @include respond(tab) {
-               width: 100%;
-            }
-         }
+
+      @include respond(desktop) {
+        height: 350px;
       }
-   }
-   .indicators {
+    }
+  }
+  &__counter {
+    margin: .5rem 0;
+    font-family: $font-secondary;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 49px;
+    color: $color-red;
+  }
+  &__arrow {
+    position: absolute;
+    bottom: 2px;
+    padding: 1rem;
+    font-size: 2rem;
+    color: $color-red;
+    cursor: pointer;
+    img {
+      height: 20px;
+    }
+    &:first-of-type {
+      left: 15px;
+      img {
+        transform: rotate(180deg);
+      }
+
+      @include respond(tab) {
+        left: -15px;
+      }
+    }
+    &:last-of-type {
+      right: 15px;
+
+      @include respond(tab) {
+        right: -15px;
+      }
+    }
+  }
+  &.carousel-slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 270px;
+    overflow: hidden;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    .carousel-fixed-item {
       position: absolute;
       right: 0;
       bottom: 4rem;
       left: 0;
-      margin: 0;
-      text-align: center;
+      z-index: 1;
+
       @include respond(tab) {
-         bottom: 2rem;
+        bottom: 2rem;
       }
-      .indicator-item {
-         &.active {
-            background-color: $color-red;
-         }
-         position: relative;
-         display: inline-block;
-         width: 30px;
-         height: 4px;
-         margin: 24px 7px;
-         cursor: pointer;
-         background-color: rgba(255, 255, 255, 0.5);
-         transition: background-color 0.3s;
-      }
-   }
-   &__link,
-   &__link:visited {
+    }
+    .carousel-item {
       position: absolute;
-      bottom: 3rem;
+      top: 0;
       left: 0;
       width: 100%;
-      @include respond(tab) {
-         margin-left: 4rem;
-         text-align: left;
+      height: 100%;
+      overflow: auto;
+      visibility: hidden;
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
       }
+      p {
+        width: 85%;
+        margin: 0 auto;
+        font-size: 12px;
+        color: #fff;
+
+        @include respond(tab) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .indicators {
+    position: absolute;
+    right: 0;
+    bottom: 4rem;
+    left: 0;
+    margin: 0;
+    text-align: center;
+
+    @include respond(tab) {
+      bottom: 2rem;
+    }
+    .indicator-item {
+      &.active {
+        background-color: $color-red;
+      }
+
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 4px;
+      margin: 24px 7px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, .5);
+      transition: background-color .3s;
+    }
+  }
+  &__link,
+  &__link:visited {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100%;
+
+    @include respond(tab) {
+      margin-left: 4rem;
+      text-align: left;
+    }
+
+    @include respond(desktop) {
+      bottom: 5rem;
+      left: -20.5%;
+      margin-left: 0;
+      text-align: center;
+    }
+    a {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 19px;
+      color: $color-red;
+      text-align: center;
+      text-decoration: underline;
+
       @include respond(desktop) {
-         bottom: 5rem;
-         left: -20.5%;
-         margin-left: 0;
-         text-align: center;
+        font-size: 1.1rem;
       }
-      a {
-         font-size: 1.4rem;
-         font-weight: 600;
-         line-height: 19px;
-         color: $color-red;
-         text-align: center;
-         text-decoration: underline;
-         @include respond(desktop) {
-            font-size: 1.1rem;
-         }
-      }
-   }
+    }
+  }
 }
