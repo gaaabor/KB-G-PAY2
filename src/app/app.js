@@ -5,6 +5,7 @@ import 'babel-polyfill';
  */
 import 'svgxuse';
 
+import Glide from '@glidejs/glide';
 import { init } from './helpers/init';
 import { render, renderFactory } from './render';
 import configureStore from './store/configureStore';
@@ -12,6 +13,11 @@ import cookieLaw from './components/cookie-law';
 import suffix from './components/suffix';
 import Timer from './components/Timer';
 import PlusOne from './components/plus-one/PlusOne';
+
+new Glide('.glide', {
+  type: 'carousel',
+  startAt: 0,
+}).mount();
 
 /**
  * The core component initialization method

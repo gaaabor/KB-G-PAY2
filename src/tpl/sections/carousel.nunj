@@ -2,35 +2,70 @@
 
 {% set slides = [
     {
-        counter: '01',
         text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
                osobních kreditních nebo služebních a korporátních kreditních
                karet) vydaných Komerční bankou a podmínek společnosti Google,
                který je provozovatelem služby Google Pay.',
         id: '1'
+    },
+    {
+        text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
+               osobních kreditních nebo služebních a korporátních kreditních
+               karet) vydaných Komerční bankou a podmínek společnosti Google,
+               který je provozovatelem služby Google Pay.',
+        id: '2'
+    },
+    {
+        text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
+               osobních kreditních nebo služebních a korporátních kreditních
+               karet) vydaných Komerční bankou a podmínek společnosti Google,
+               který je provozovatelem služby Google Pay.',
+        id: '3'
+    },
+    {
+        text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
+               osobních kreditních nebo služebních a korporátních kreditních
+               karet) vydaných Komerční bankou a podmínek společnosti Google,
+               který je provozovatelem služby Google Pay.',
+        id: '4'
     }] 
 %}
 
 <section class="slider__section">
   <div class="slider__content">
-
     <h2 class="heading-secondary heading-secondary--white">
       Jak začít používat Google Pay?
     </h2>
-
-    <div class="slider">      
-      {% for slide in slides %}
-      <div class="slider__item" href="#one!">
-        <div class="slider__counter">{{ slide.counter }}</div>
-        <p class="slider__text">
-          {{ slide.text }}
-        </p>
-      </div> 
-      {% endfor %}
+    <div class="glide">
+      <div data-glide-el="track" class="glide__track">  
+        <ul class="glide__slides">    
+          {% for slide in slides %}
+          <li class="glide__slide">
+            <div class="glide__counter">0{{ slide.id }}</div>
+            <p class="glide__text">
+              {{ slide.text }}
+            </p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="glide__controls">
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          {% for slide in slides %}
+            <div class="glide__bullet"></div>
+          {% endfor %}
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            {{ svg('icon-arrow-left', 'glide__arrow-svg') }}
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            {{ svg('icon-arrow-right', 'glide__arrow-svg') }}
+          </button>
+        </div>
+      </div>
     </div>
-
   </div>
-
   <div class="slider__video">
     <iframe
       class="iframe"
@@ -41,7 +76,5 @@
       allowFullScreen>
     </iframe>
   </div>
-
   <a class="slider__link" href="#">Kompletní návod najdete zde</a>
-
 </section>

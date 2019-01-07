@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ _cssPath }}/main{% if not _dev %}.min{% endif %}.css">
-    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css"> #}
 
     {% if firstVisit %}
         <script>
