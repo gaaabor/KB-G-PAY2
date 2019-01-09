@@ -9,6 +9,7 @@
     font-weight: 600;
     line-height: 18px;
     text-align: center;
+    text-transform: uppercase;
 
     @include respond(tab) {
       margin: 1rem 3rem;
