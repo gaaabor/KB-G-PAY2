@@ -1,26 +1,22 @@
-.heading {
-  &-primary {
-    font-family: $font-secondary;
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 37px;
-    color: $color-black;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  &-secondary {
-    font-family: $font-secondary;
-    font-size: 1.8rem;
-    font-weight: 800;
-    line-height: 22px;
-    color: $color-black;
-    &--white {
-      color: #fff;
-    }
-  }
+h1 {
+  font-family: $font-secondary;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 37px;
+  color: $color-black;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.para {
+h2 {
+  font-family: $font-secondary;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 22px;
+  color: $color-black;
+}
+
+p {
   font-family: $font-primary;
   font-size: 1.5rem;
   line-height: 20px;

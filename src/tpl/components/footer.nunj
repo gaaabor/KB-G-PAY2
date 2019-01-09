@@ -3,7 +3,6 @@
 <footer class="footer">
    <h3 class="footer__title">JEŠTĚ NEMÁTE NAŠI MOBILNÍ BANKU?</h3>
    <div class="footer__container">
-   {# {{ svg(sprite = "logos", "logo-kb-gpay", "header__logo") }} #}
    {{ svg(sprite = "logos", "google-badge", "footer__logo") }}
    <div class="footer__bottom">
       <p>© 2018 KOMERČNÍ BANKA</p>

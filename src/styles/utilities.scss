@@ -1,3 +1,59 @@
-.highlighted {
-  color: $color-red;
+.u {
+  // COLOR
+  &-highlighted {
+    color: $color-red;
+  }
+  &-white {
+    color: #fff;
+  }
+  // MARGIN
+  &-m {
+    &-tiny {
+      margin: .5rem;
+    }
+    &-sm {
+      margin: 1.5rem;
+    }
+  }
+  &-mt {
+    &-tiny {
+      margin-top: .5rem;
+    }
+    &-sm {
+      margin-top: 1.5rem;
+    }
+  }
+  &-mb {
+    &-tiny {
+      margin-bottom: .5rem;
+    }
+    &-sm {
+      margin-bottom: 1.5rem;
+    }
+  }
+  // PADDING
+  &-p {
+    &-tiny {
+      padding: .5rem;
+    }
+    &-sm {
+      padding: 1.5rem;
+    }
+  }
+  &-pt {
+    &-tiny {
+      padding-top: .5rem;
+    }
+    &-sm {
+      padding-top: 1.5rem;
+    }
+  }
+  &-pb {
+    &-tiny {
+      padding-bottom: .5rem;
+    }
+    &-sm {
+      padding-bottom: 1.5rem;
+    }
+  }
 }

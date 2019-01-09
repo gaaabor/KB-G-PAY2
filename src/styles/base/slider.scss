@@ -6,14 +6,6 @@
     padding: 1.5rem;
     text-align: center;
     background-color: $color-black;
-    h2 {
-      max-width: 21rem;
-      margin: 3rem auto .5rem;
-
-      @include respond(tab) {
-        margin: 0;
-      }
-    }
 
     @include respond(tab) {
       flex-direction: row;
@@ -33,8 +25,17 @@
       text-align: left;
     }
   }
+  &__title {
+    max-width: 21rem;
+    margin: 3rem auto .5rem;
+    color: #fff;
+
+    @include respond(tab) {
+      margin: 0;
+    }
+  }
   &__video {
-    margin-bottom: 6rem;
+    margin: 2rem 0 6rem;
 
     @include respond(tab) {
       flex-basis: 60%;
@@ -72,12 +73,13 @@
     text-decoration: underline;
 
     @include respond(tab) {
+      bottom: 1.5rem;
       margin-left: 4rem;
       text-align: left;
     }
 
     @include respond(desktop) {
-      bottom: 4rem;
+      bottom: 2.5rem;
       left: -20.5%;
       margin-left: 0;
       font-size: 1.1rem;
@@ -110,7 +112,7 @@
     display: inline-block;
     margin-top: 2rem;
 
-    @include respond(desktop) {
+    @include respond(tab) {
       margin: 1.5rem 2rem;
     }
   }
@@ -120,14 +122,8 @@
   &__bullet {
     width: 30px;
     height: 4px;
-    padding: 0;
     margin: 0 .25em;
-    line-height: 0;
-    cursor: pointer;
     background-color: rgba(255, 255, 255, .5);
-    border: 2px solid transparent;
-    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .1);
-    transition: all 50ms ease-in-out;
 
     &--active {
       background-color: $color-red;

@@ -6,7 +6,7 @@
 
   {% include "sections/features.nunj" %}
 
-  {% include "sections/carousel.nunj" %}
+  {% include "sections/slider.nunj" %}
 
   {% include "sections/form.nunj" %}
 

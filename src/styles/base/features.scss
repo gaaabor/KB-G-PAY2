@@ -16,34 +16,44 @@
   &__title {
     padding: 3rem 3rem 0;
     text-align: center;
-    .para {
-      margin-top: 1rem;
-    }
   }
   &__item {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 23rem;
-    min-height: 115px;
+    width: 25rem;
+    min-height: 130px;
     padding-left: 1rem;
     margin-top: 3rem;
   }
+  &__item::after {
+    position: absolute;
+    bottom: -18px;
+    left: 53px;
+    display: inline;
+    width: 1px;
+    height: 45px;
+    background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 1px 3px;
+    content: '';
+  }
+  &__item:last-of-type::after {
+    display: none;
+  }
   &__icon {
-    width: 10rem;
-    height: 10rem;
-    &-background {
-      position: relative;
-      width: 9rem;
-      height: 9rem;
-      background-color: #fff;
-      border-radius: 50%;
-      box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1);
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1);
 
-      @include flexCenter;
-    }
+    @include flexCenter;
     &-svg {
       width: 5.5rem;
+      height: 5.5rem;
     }
     &-counter::before {
       content: counter(badge) '.';
@@ -51,8 +61,8 @@
     }
     &-counter {
       position: absolute;
-      top: -8px;
-      left: -13px;
+      top: -4px;
+      left: -9px;
       width: 3rem;
       height: 3rem;
       font-family: $font-secondary;
@@ -66,34 +76,12 @@
     }
   }
   &__text {
+    width: 50%;
     margin: 0 1.5rem;
-    &--title {
-      min-width: 12rem;
-    }
-    &--para {
-      margin-top: 5px;
-      font-family: $font-secondary;
-      font-size: 1.2rem;
-      line-height: 17px;
-      color: rgba(25, 25, 25, .5);
-    }
-  }
-  &__dots {
-    position: absolute;
-    bottom: -10px;
-    left: 53px;
-    font-size: 1.5rem;
-    &--tablet {
-      display: none;
-    }
-    span.dot {
-      display: block;
-      line-height: 7px;
-    }
-
-    @media only screen and (min-width: 1050px) {
-      right: -90%;
-    }
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    line-height: 17px;
+    color: rgba(25, 25, 25, .5);
   }
   &__bottom {
     padding: 0 3rem 3rem;
@@ -130,17 +118,29 @@
       padding-left: 0;
       text-align: center;
     }
+    &__item::after {
+      position: absolute;
+      top: 23%;
+      left: 82%;
+      display: inline;
+      width: 80px;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        black 33%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      background-position: bottom;
+      background-repeat: repeat-x;
+      background-size: 6px;
+      content: '';
+    }
     &__icon {
-      display: flex;
-      justify-content: center;
       width: 12rem;
       height: 12rem;
-      &-background {
-        width: 11rem;
-        height: 11rem;
-      }
       &-svg {
-        width: 6rem;
+        width: 6.5rem;
+        height: 6.5rem;
       }
       &-counter {
         width: 3.6rem;
@@ -151,21 +151,6 @@
     &__text {
       max-width: 12rem;
       margin-top: 1rem;
-      p {
-        margin-top: 1rem;
-      }
-    }
-    &__dots {
-      top: 15%;
-      right: -75%;
-      font-size: 1.9rem;
-      white-space: nowrap;
-      span.dot {
-        display: inline;
-      }
-      &--tablet {
-        display: inline;
-      }
     }
     &__bottom {
       max-width: 53rem;
@@ -178,26 +163,12 @@
 ////////////////////////////////////////////////////
 @include respond(desktop) {
   .features {
-    max-width: 920px;
+    max-width: 65%;
     &__title {
       padding: 5rem 0 2rem;
     }
-    &__icon {
-      &-background {
-        width: 12rem;
-        height: 12rem;
-      }
-      &-counter {
-        top: 0;
-        left: -4px;
-      }
-    }
     &__text {
       margin-top: 2rem;
-    }
-    &__dots {
-      top: 18%;
-      right: -83%;
     }
   }
 }

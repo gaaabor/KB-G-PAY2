@@ -23,26 +23,13 @@
 
 {% for item in items %}
   <div class="features__item">
-  <div class="features__icon">
-      <div class="features__icon-background">
-        <div class="features__icon-counter"></div>
-        {{ svg( item.iconName, "features__icon-svg") }}
-      </div>
+    <div class="features__icon">
+      <div class="features__icon-counter"></div>
+      {{ svg( item.iconName, "features__icon-svg") }}
+    </div>
+    <div class="features__text">
+      <h2>{{ item.title }}</h2>
+      <p class="u-mt-tiny">{{ item.description }}</p>
+    </div>
   </div>
-  <div class="features__text">
-    <h2 class="features__text--title heading-secondary">{{ item.title }}</h2>
-    <p class="features__text--para">{{ item.description }}</p>
-  </div>
-
-  {% if (item.id < items.length) %}
-  <div class="features__dots">
-    <span class="dot">.</span> <span class="dot">.</span>
-    <span class="dot">.</span> <span class="dot">.</span>
-    <span class="features__dots--tablet">
-      <span class="dot">.</span> <span class="dot">.</span>
-      <span class="dot">.</span>
-    </span>
-  </div>
-  {% endif %}
-</div>
 {% endfor %}

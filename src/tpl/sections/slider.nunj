@@ -6,34 +6,34 @@
                osobních kreditních nebo služebních a korporátních kreditních
                karet) vydaných Komerční bankou a podmínek společnosti Google,
                který je provozovatelem služby Google Pay.',
-        id: '1'
+        id: '01'
     },
     {
         text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
                osobních kreditních nebo služebních a korporátních kreditních
                karet) vydaných Komerční bankou a podmínek společnosti Google,
                který je provozovatelem služby Google Pay.',
-        id: '2'
+        id: '02'
     },
     {
         text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
                osobních kreditních nebo služebních a korporátních kreditních
                karet) vydaných Komerční bankou a podmínek společnosti Google,
                který je provozovatelem služby Google Pay.',
-        id: '3'
+        id: '03'
     },
     {
         text: 'Zároveň budete vyzváni k akceptaci Podmínek debetních (případně
                osobních kreditních nebo služebních a korporátních kreditních
                karet) vydaných Komerční bankou a podmínek společnosti Google,
                který je provozovatelem služby Google Pay.',
-        id: '4'
+        id: '04'
     }] 
 %}
 
 <section class="slider__section">
   <div class="slider__content">
-    <h2 class="heading-secondary heading-secondary--white">
+    <h2 class="slider__title">
       Jak začít používat Google Pay?
     </h2>
     <div class="glide">
@@ -41,7 +41,7 @@
         <ul class="glide__slides">    
           {% for slide in slides %}
           <li class="glide__slide">
-            <div class="glide__counter">0{{ slide.id }}</div>
+            <div class="glide__counter">{{ slide.id }}</div>
             <p class="glide__text">
               {{ slide.text }}
             </p>
@@ -49,6 +49,7 @@
           {% endfor %}
         </ul>
       </div>
+
       <div class="glide__controls">
         <div class="glide__bullets" data-glide-el="controls[nav]">
           {% for slide in slides %}
@@ -64,6 +65,7 @@
           </button>
         </div>
       </div>
+
     </div>
   </div>
   <div class="slider__video">

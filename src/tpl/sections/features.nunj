@@ -1,7 +1,7 @@
 <section class="features">
   <div class="features__title">
-    <h1 class="heading-primary">Soutěžte s Google Pay</h1>
-    <p class="paragraph">Plaťte mobilním telefonem a vyhrajte!</p>
+    <h1>Soutěžte s Google Pay</h1>
+    <p class="u-mt-sm">Plaťte mobilním telefonem a vyhrajte!</p>
   </div>
 
   <div class="features__container">
@@ -9,15 +9,15 @@
   </div>
 
   <div class="features__bottom">
-    <h2 class="heading-secondary">
-      Soutěžíme o <span class="highlighted">1400 ks</span> poukázek do Alza a Notino.
+    <h2>
+      Soutěžíme o <span class="u-highlighted">1400 ks</span> poukázek do Alza a Notino.
     </h2>
     <p>
-      V týdnu <span class="highlighted">od 12. listopadu do 18. listopadu</span> soutěžíme o
+      V týdnu <span class="u-highlighted">od 12. listopadu do 18. listopadu</span> soutěžíme o
       700 ks poukázek v hodnotě 500 Kč do Alza
     </p>
     <p>
-      V týdnu <span class="highlighted">od 19. listopadu do 25. listopadu</span> soutěžíme o
+      V týdnu <span class="u-highlighted">od 19. listopadu do 25. listopadu</span> soutěžíme o
       700 ks poukázek v hodnotě 500 Kč do Notino
     </p>
   </div>

@@ -1,7 +1,7 @@
 <section class="form">
 
-  <h1 class="heading-primary form__heading">Registrační formulář</h1>
-  <p class="para">Vyplň formulář a začni soutěžit.</p>
+  <h1 class="u-mt-sm u-mb-sm">Registrační formulář</h1>
+  <p>Vyplň formulář a začni soutěžit.</p>
 
   <form id="form">
     <input type="text" placeholder="First Name" name="name" required />
@@ -35,7 +35,7 @@
       </label>
       <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan.</p>
     </div>
-    <button type="submit" class="registerbtn">Odeslat</button>
+    <button type="submit" class="btn btn--red">Odeslat</button>
   </form>
 
 </section>
